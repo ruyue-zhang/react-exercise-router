@@ -1,0 +1,10 @@
+.app {
+  margin: 10px auto;
+  width: 800px;
+  height: 500px;
+  border: 1px solid;
+}
+
+.route {
+  margin: 20px 30px;
+}
