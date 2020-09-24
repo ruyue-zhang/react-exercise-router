@@ -5,14 +5,22 @@
   border: 1px solid;
 }
 
+.header {
+  text-align: end;
+  height: 30px;
+  background-color: rgb(189, 181, 181);
+}
+
 .route {
   margin: 20px 30px;
 }
 
-.nav-item {
+a.nav_item {
+  margin-right: 30px;
+  color: black;
   text-decoration: none;
 }
 
-.nav-active {
+a.nav_active {
   text-decoration: underline;
 }

@@ -5,18 +5,10 @@ import '../styles/App.css';
 const Header = () => {
   return (
     <div className="header">
-      <NavLink to="/" activeClassName="nav_active" className="nav_item">
-          Home
-          </NavLink>
-          <NavLink to="/products" activeClassName="nav_active" className="nav_item">
-          Products
-          </NavLink>
-          <NavLink to="/my-profile" activeClassName="nav_active" className="nav_item">
-          My Profile
-          </NavLink>
-          <NavLink to="/about-us" activeClassName="nav_active" className="nav_item">
-          About Us
-          </NavLink>
+      <NavLink exact to="/" activeClassName="nav_active" className="nav_item">Home</NavLink>
+      <NavLink exact to="/products" activeClassName="nav_active" className="nav_item">Products</NavLink>
+      <NavLink exact to="/my-profile" activeClassName="nav_active" className="nav_item">My Profile</NavLink>
+      <NavLink exact to="/about-us" activeClassName="nav_active" className="nav_item">About Us</NavLink>
     </div>
   );
 }
