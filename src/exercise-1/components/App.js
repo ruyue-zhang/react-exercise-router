@@ -7,7 +7,7 @@ import Profile from './Profile';
 import Products from '../../exercise-2/components/Products';
 import Product from '../../exercise-2/components/Product';
 import Header from './Header';
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { Switch, Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 class App extends Component {
    render() {
@@ -19,9 +19,15 @@ class App extends Component {
             <Switch>
               <Route exact path='/about-us' component={About}/>
               <Route exact path='/products' component={Products}/>
+              <Route exact path='/goods'>
+                <Redirect to='/products'/>
+              </Route>
               <Route exact path='/products/:id' component={Product}/>
               <Route exact path='/my-profile' component={Profile}/>
               <Route exact path="/" component={Home}/>
+              <Route path='*'>
+                <Redirect to='/'/>
+              </Route>
             </Switch>
           </div>
         </Router>
