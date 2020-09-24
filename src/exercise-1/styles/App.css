@@ -8,3 +8,11 @@
 .route {
   margin: 20px 30px;
 }
+
+.nav-item {
+  text-decoration: none;
+}
+
+.nav-active {
+  text-decoration: underline;
+}

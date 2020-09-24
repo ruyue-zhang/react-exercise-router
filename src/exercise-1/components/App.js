@@ -5,29 +5,22 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Home from './Home';
 import About from './About';
 import Profile from './Profile';
+import Products from '../../exercise-2/components/Products';
+import Header from './Header';
 
 class App extends Component {
-  render() {
+  handleClick = (event) => {
+    event.target.style["textDecoration"] = "underline";
+  }
+   render() {
     return (
       <div className="app">
         <Router>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <Link to="/" className="nav-link" class="nav-link">Home</Link>
-                </li>
-                <li class="nav-item">
-                <Link to="/my-profile" className="nav-link" class="nav-link">My Profile</Link>
-                </li>
-                <li class="nav-item">
-                  <Link to="/about-us" className="nav-link" class="nav-link">About Us</Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
+          <Header></Header>
           <div className="route">
             <Route exact path='/about-us' component={About}/>
+            <Route exact path='/products' component={Products}/>
+            <Route path='/products/:id' component={Products}/>
             <Route exact path='/my-profile' component={Profile}/>
             <Route exact path="/" component={Home}/>
           </div>
